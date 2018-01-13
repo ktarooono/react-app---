@@ -21,7 +21,7 @@ render(){
 
 };
 
-console.log("app.js　読み込み成功しました！")
+console.log("app.js　読み込み成功しました！yattane")
 
 render(<App/>,document.getElementById("react"));
 

@@ -985,7 +985,7 @@ var App = function (_Component) {
 
 ;
 
-console.log("app.js　読み込み成功しました！");
+console.log("app.js　読み込み成功しました！yattane");
 
 (0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById("react"));
 
