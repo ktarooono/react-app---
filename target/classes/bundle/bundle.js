@@ -75,12 +75,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log("App.java");
-
-
-
-
-
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
