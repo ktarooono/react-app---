@@ -1,12 +1,11 @@
 package src.main.java;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@SpringBootApplication
-@RestController
-@EnableAutoConfiguration
+@SpringBootApplication
+//@RestController
+//@EnableAutoConfiguration
 public class App{
 
 

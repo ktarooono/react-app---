@@ -1,19 +1,19 @@
 "use strict";
 
 
-import newPoster from "./newPoster";
+import NewPoster from "./NewPoster";
 import React, { Component } from 'react';
-import {render} from "react-dom";
+import ReactDOM from "react-dom";
 
 
-class App extends Component {
+export class App extends Component {
 
 
 render(){
 	return (
 			<div>
 				App.js
-				<newPoster/>
+				<NewPoster/>
 			</div>
 			);
 
@@ -24,11 +24,7 @@ render(){
 
 console.log("app.js　読み込み成功しました！yattane")
 
-render(<App/>,document.getElementById("react"));
-
-
-export default App;
-
+ReactDOM.render(<App/>,document.getElementById("react"));
 
 
 

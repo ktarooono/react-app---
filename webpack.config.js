@@ -10,8 +10,8 @@ module.exports = {
 	  path: __dirname + "/src/main/resources/static",
 	  filename: 'bundle.js'
   },
-  devtool: 'cheap-module-eval-source-map',
-  module: {
+  devtool: 'inline-source-map',
+	  module: {
       loaders: [
          {
            test: /\.(js|jsx)$/,

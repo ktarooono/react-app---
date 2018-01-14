@@ -35,10 +35,11 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
+	<dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>
     </dependency>
+
 
 <!-- JUnitの指定を削除（Spring Boot に同梱されているため）【削除】
     <dependency>
