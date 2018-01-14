@@ -4,6 +4,7 @@ Implementation-Version: 1.0.0-SNAPSHOT
 Built-By: ktaro
 Implementation-Vendor-Id: edu.self
 Build-Jdk: 1.8.0_152
+Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

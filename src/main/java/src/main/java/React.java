@@ -18,7 +18,7 @@ public @ResponseBody String main() {
 @RequestMapping("/index")
 public String displayIndex() {
 
-
+	System.out.println("react.java");
 	return "index";
 }
 

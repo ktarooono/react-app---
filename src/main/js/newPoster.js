@@ -1,7 +1,7 @@
 "use strict";
 
-
 import newPoster from "./newPoster";
+
 import React, { Component } from 'react';
 import {render} from "react-dom";
 
@@ -12,8 +12,7 @@ class App extends Component {
 render(){
 	return (
 			<div>
-				App.js
-				<newPoster/>
+				newPoster start
 			</div>
 			);
 
@@ -22,7 +21,7 @@ render(){
 
 };
 
-console.log("app.js　読み込み成功しました！yattane")
+console.log("newPosterr.js　読み込み成功しました！yattane")
 
 render(<App/>,document.getElementById("react"));
 
