@@ -8,11 +8,14 @@ export default class NewPoster extends Component {
 
 	  constructor(props) {
 		    super(props);
-		  }
+
+	  }
+
+
 
 render(){
 	return (
-			<div>
+			<div style={{backgroundColor:"green"}}>
 				NewPoster.js だよ
 			</div>
 			);
