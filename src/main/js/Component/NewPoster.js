@@ -2,21 +2,23 @@
 
 
 import React, { Component } from 'react';
-
+import {RaisedButton} from 'material-ui';
 
 export default class NewPoster extends Component {
 
 	  constructor(props) {
 		    super(props);
+		    this.state ={user:"oono"};
 
 	  }
 
 
 
-render(){
+render(){　
 	return (
 			<div style={{backgroundColor:"green"}}>
-				NewPoster.js だよ
+				NewPoster.jsですよ
+
 			</div>
 			);
 
