@@ -37,6 +37,8 @@ public class PostedDaoImpl {
 
 			rs = ste.executeUpdate();
 
+		}catch(SQLException e) {
+			return false;
 		}
 
 		return (rs==0) ? false : true;

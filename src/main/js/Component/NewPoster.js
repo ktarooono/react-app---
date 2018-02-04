@@ -19,11 +19,9 @@ export default class NewPoster extends Component {
 		  request.open("GET", `http://localhost:8080/api/Home/createSNSTable`);
 		  request.addEventListener("load", (event) => {
 		      console.log(event.target.status); // => 200
-		      console.log(event); // => "{...}"
+		      console.log(event.target.responseText); // => "{...}"
 		  });
-		  request.send();
-
-
+		  request.send()
 
 		  return false;
 	  };
