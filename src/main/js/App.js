@@ -2,6 +2,7 @@
 
 
 import Home from "./index/Home";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import UserRegister from "./index/UserRegister";
@@ -34,10 +35,12 @@ render(){
 
 
 	return (
+			<MuiThemeProvider>
 			<div>
 				App.js
 				{Component}
 			</div>
+			</MuiThemeProvider>
 			);
 
 

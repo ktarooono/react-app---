@@ -18,7 +18,7 @@ render(){　
 	return (
 			<div style={{backgroundColor:"green"}}>
 				NewPoster.jsですよ
-
+				<RaisedButton label="oihuzake"/>
 			</div>
 			);
 
