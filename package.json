@@ -26,5 +26,17 @@
     "babel-preset-react": "^6.24.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "development.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktarooono/react-app---.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktarooono/react-app---/issues"
+  },
+  "homepage": "https://github.com/ktarooono/react-app---#readme"
 }
