@@ -71,7 +71,7 @@ export default class NewPoster extends Component {
 render(){
 
 	let sentenceStyle ={
-			minHeight:"500px",
+			width:"100%",
 
 	};
 
@@ -82,7 +82,7 @@ render(){
 				<p><TextField hintText="本文" id="sentence"
 					onChange={this.handleOnSentenceChange}
 					value={this.state.sentence}
-					textareaStyle={sentenceStyle}
+					style={sentenceStyle}
 					multiLine={true}
 					rowsMax={30}
 					rows={3}
