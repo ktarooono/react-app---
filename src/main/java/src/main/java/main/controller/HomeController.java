@@ -20,7 +20,7 @@ public class HomeController {
 	public @ResponseBody boolean createSNSTable() throws SQLException{
 
 		boolean result = postedDao.createPosted();
-
+		System.out.println("createSNSTable");
 
 		return result;
 
