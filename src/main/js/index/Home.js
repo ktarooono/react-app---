@@ -1,5 +1,6 @@
 "use strict"
-
+// いじる前にだれかいじってないかスプレッドシートを確認してください。
+//コンフリクトしないように更新してから編集するようにしましょう。
 
 import React, { Component } from 'react';
 import {AppBar} from 'material-ui';
