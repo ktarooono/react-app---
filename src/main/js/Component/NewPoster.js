@@ -61,6 +61,9 @@ export default class NewPoster extends Component {
 			  event.responseType = "json";
 		      console.log(event.target); // => 200
 		      console.log(event.target.response); // => "{...}"
+		      if(event.target.response=="true"){
+		    	  location.reload();
+		      }
 		  });
 		  request.send()
 
