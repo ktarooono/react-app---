@@ -6,13 +6,25 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import UserRegister from "./index/UserRegister";
-import TimeLine from "./index/TimeLine";
+import {AppBar,MenuItem,Menu,RaisedButton} from "material-ui";
+
 
 
 export class App extends Component {
 
 	constructor(props){
 		super(props);
+
+	}
+
+
+
+
+	handleMoveLogin(){
+		window.open("http://localhost:8080/index/UserRegister");
+	}
+	handleMoveHome(){
+		window.open("http://localhost:8080/index/home");
 	}
 
 
@@ -30,15 +42,18 @@ render(){
 		Component = <Home/>;
 	}else if(path=="UserRegister"){
 		Component = <UserRegister/>;
-	}else if(path=="timeline") {
-		Component = <TimeLine/>
 	}
-
 
 
 
 	return (
 			<MuiThemeProvider>
+			<AppBar title="Twintter">
+				<RaisedButton onClick={this.handleMoveLogin} label="Login"  primary={true}/>
+				<RaisedButton onClick={this.handleMoveHome} label="Home"  primary={true}/>
+
+			</AppBar>
+
 			<div>
 				App.js
 				{Component}

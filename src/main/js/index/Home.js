@@ -1,7 +1,10 @@
 "use strict"
 
+
 import React, { Component } from 'react';
+import {AppBar} from 'material-ui';
 import NewPoster from "../Component/NewPoster";
+import Tweet from "../Component/Tweet";
 
 export default class Home extends Component{
 
@@ -15,6 +18,8 @@ export default class Home extends Component{
 		return(
 		<div style={{backgroundColor:"red"}}>
 			Home.js
+			<Tweet/>
+
 			<NewPoster/>
 
 		</div>

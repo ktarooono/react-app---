@@ -2,7 +2,8 @@
 
 
 import React, { Component } from 'react';
-import {RaisedButton,TextField} from 'material-ui';
+import {RaisedButton,TextField,Toolbar,ToolbarGroup} from 'material-ui';
+
 
 export default class NewPoster extends Component {
 
@@ -16,6 +17,7 @@ export default class NewPoster extends Component {
 		    this.handleCreateSNS = this.handleCreateSNS.bind(this);
 		    this.handleOnSentenceChange = this.handleOnSentenceChange.bind(this);
 		    this.handleSubmitButtonPush = this.handleSubmitButtonPush.bind(this);
+		    this.handleNewPostButtonClick=this.handleNewPostButtonClick.bind(this);
 	  }
 
 	  handleCreateSNS(event){
@@ -69,6 +71,13 @@ export default class NewPoster extends Component {
 
 
 	  }
+	  handleNewPostButtonClick(){
+		  this.setState((prev)=>({
+			  nwePosterVisible:true
+		  }));
+
+	  }
+
 
 
 render(){
@@ -80,6 +89,7 @@ render(){
 
 	return (
 			<div style={{backgroundColor:"green"}}>
+			<div>
 				<p>NewPoster.jsですよ</p>
 				<p><TextField hintText="題名" id="title" onChange={this.handleOnSentenceChange} value={this.state.title}/></p>
 				<p><TextField hintText="本文" id="sentence"
@@ -99,6 +109,13 @@ render(){
 				label="CREATE　SNS　Table"
 					onClick={this.handleCreateSNS}
 				/>
+			</div>
+			<Toolbar>
+				<ToolbarGroup>
+					<RaisedButton label="新規投稿" onClick={this.handleNewPostButtonClick}/>
+
+				</ToolbarGroup>
+			</Toolbar>
 			</div>
 			);
 
