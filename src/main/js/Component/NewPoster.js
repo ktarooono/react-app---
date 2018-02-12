@@ -2,7 +2,7 @@
 
 
 import React, { Component } from 'react';
-import {RaisedButton,TextField,Toolbar,ToolbarGroup,FontIcon} from 'material-ui';
+import {RaisedButton,TextField,Toolbar,ToolbarGroup,FontIcon,Paper} from 'material-ui';
 
 
 export default class NewPoster extends Component {
@@ -13,7 +13,8 @@ export default class NewPoster extends Component {
 		    		user:"oono",
 		    		sentence : "",
 		    		title : "",
-		    		newPosterVisible:"none"
+		    		newPosterVisible:"none",
+		    		toolBarPosition:"fixed"
 		    		};
 		    this.handleCreateSNS = this.handleCreateSNS.bind(this);
 		    this.handleOnSentenceChange = this.handleOnSentenceChange.bind(this);
@@ -75,13 +76,15 @@ export default class NewPoster extends Component {
 	  }
 	  handleNewPostButtonClick(){
 		  this.setState((prev)=>({
-			  newPosterVisible:"block"
+			  newPosterVisible:"block",
+			  toolBarPosition:"relative"
 		  }));
 
 	  }
 	  handleClearButtonClick(){
 		  this.setState((prev)=>({
-			  newPosterVisible:"none"
+			  newPosterVisible:"none",
+			  toolBarPosition:"fixed"
 		  }));
 
 	  }
@@ -98,10 +101,10 @@ render(){
 
 	let newPosterStyle ={
 			display:this.state.newPosterVisible
-	}
+	};
 	return (
 			<div style={{backgroundColor:"green"}}>
-			<Toolbar>
+			<Toolbar style={{position:"fixed",bottom:"0px",width:"100%",position:this.state.toolBarPosition}}>
 				<ToolbarGroup>
 					<RaisedButton label="新規投稿" onClick={this.handleNewPostButtonClick}/>
 				</ToolbarGroup>
