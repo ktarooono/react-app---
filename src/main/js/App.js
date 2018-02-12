@@ -6,6 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import UserRegister from "./index/UserRegister";
+import TimeLine from "./index/TimeLine";
 
 
 export class App extends Component {
@@ -29,6 +30,8 @@ render(){
 		Component = <Home/>;
 	}else if(path=="UserRegister"){
 		Component = <UserRegister/>;
+	}else if(path=="timeline") {
+		Component = <TimeLine/>
 	}
 
 
