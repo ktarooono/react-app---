@@ -2,7 +2,7 @@
 
 
 import React, { Component } from 'react';
-import {RaisedButton,TextField,Toolbar,ToolbarGroup} from 'material-ui';
+import {RaisedButton,TextField,Toolbar,ToolbarGroup,FontIcon} from 'material-ui';
 
 
 export default class NewPoster extends Component {
@@ -12,12 +12,14 @@ export default class NewPoster extends Component {
 		    this.state ={
 		    		user:"oono",
 		    		sentence : "",
-		    		title : ""
+		    		title : "",
+		    		newPosterVisible:"none"
 		    		};
 		    this.handleCreateSNS = this.handleCreateSNS.bind(this);
 		    this.handleOnSentenceChange = this.handleOnSentenceChange.bind(this);
 		    this.handleSubmitButtonPush = this.handleSubmitButtonPush.bind(this);
 		    this.handleNewPostButtonClick=this.handleNewPostButtonClick.bind(this);
+		    this.handleClearButtonClick = this.handleClearButtonClick.bind(this);
 	  }
 
 	  handleCreateSNS(event){
@@ -73,10 +75,17 @@ export default class NewPoster extends Component {
 	  }
 	  handleNewPostButtonClick(){
 		  this.setState((prev)=>({
-			  nwePosterVisible:true
+			  newPosterVisible:"block"
 		  }));
 
 	  }
+	  handleClearButtonClick(){
+		  this.setState((prev)=>({
+			  newPosterVisible:"none"
+		  }));
+
+	  }
+
 
 
 
@@ -87,9 +96,20 @@ render(){
 
 	};
 
+	let newPosterStyle ={
+			display:this.state.newPosterVisible
+	}
 	return (
 			<div style={{backgroundColor:"green"}}>
-			<div>
+			<Toolbar>
+				<ToolbarGroup>
+					<RaisedButton label="新規投稿" onClick={this.handleNewPostButtonClick}/>
+				</ToolbarGroup>
+				<ToolbarGroup>
+					<RaisedButton label="cancel" onClick={this.handleClearButtonClick}/>
+				</ToolbarGroup>
+			</Toolbar>
+			<div style={newPosterStyle}>
 				<p>NewPoster.jsですよ</p>
 				<p><TextField hintText="題名" id="title" onChange={this.handleOnSentenceChange} value={this.state.title}/></p>
 				<p><TextField hintText="本文" id="sentence"
@@ -110,12 +130,7 @@ render(){
 					onClick={this.handleCreateSNS}
 				/>
 			</div>
-			<Toolbar>
-				<ToolbarGroup>
-					<RaisedButton label="新規投稿" onClick={this.handleNewPostButtonClick}/>
 
-				</ToolbarGroup>
-			</Toolbar>
 			</div>
 			);
 
