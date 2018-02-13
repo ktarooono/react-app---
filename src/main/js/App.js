@@ -49,13 +49,12 @@ render(){
 	return (
 			<MuiThemeProvider>
 			<AppBar title="Twintter">
-				<RaisedButton onClick={this.handleMoveLogin} label="Login"  primary={true}/>
-				<RaisedButton onClick={this.handleMoveHome} label="Home"  primary={true}/>
+				<RaisedButton buttonStyle={{height:"100%"}} onClick={this.handleMoveLogin} label="Login"  primary={true}/>
+				<RaisedButton buttonStyle={{height:"100%"}} onClick={this.handleMoveHome} label="Home"  primary={true}/>
 
 			</AppBar>
 
 			<div>
-				App.js
 				{Component}
 			</div>
 			</MuiThemeProvider>

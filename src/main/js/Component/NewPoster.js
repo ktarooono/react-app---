@@ -100,10 +100,12 @@ render(){
 	};
 
 	let newPosterStyle ={
-			display:this.state.newPosterVisible
+			display:this.state.newPosterVisible,
+			border:"solid",
+			padding:"20px"
 	};
 	return (
-			<div style={{backgroundColor:"green"}}>
+			<div>
 			<Toolbar style={{position:"fixed",bottom:"0px",width:"100%",position:this.state.toolBarPosition}}>
 				<ToolbarGroup>
 					<RaisedButton label="新規投稿" onClick={this.handleNewPostButtonClick}/>
@@ -113,7 +115,6 @@ render(){
 				</ToolbarGroup>
 			</Toolbar>
 			<div style={newPosterStyle}>
-				<p>NewPoster.jsですよ</p>
 				<p><TextField hintText="題名" id="title" onChange={this.handleOnSentenceChange} value={this.state.title}/></p>
 				<p><TextField hintText="本文" id="sentence"
 					onChange={this.handleOnSentenceChange}
@@ -128,10 +129,7 @@ render(){
 				onClick={this.handleSubmitButtonPush}
 				/>
 
-				<RaisedButton
-				label="CREATE　SNS　Table"
-					onClick={this.handleCreateSNS}
-				/>
+
 			</div>
 
 			</div>

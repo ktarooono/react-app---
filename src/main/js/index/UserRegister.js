@@ -8,8 +8,7 @@ export default class UserRegister extends Component{
 
 	render(){
 		return(
-		<div style={{backgroundColor:"red"}}>
-			UserRegister.javaですよ
+		<div>
 			<Login/>
 		</div>
 		)

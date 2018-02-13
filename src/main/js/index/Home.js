@@ -17,8 +17,8 @@ export default class Home extends Component{
 
 	render(){
 		return(
-		<div style={{backgroundColor:"red"}}>
-			Home.js
+		<div >
+
 			<Tweet/>
 
 			<NewPoster/>

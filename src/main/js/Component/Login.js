@@ -35,9 +35,8 @@ export default class UserRegister extends Component{
 
 	render(){
 		return(
-		<div style={{backgroundColor:"aqua",width:"80%",margin:"0 auto"}}>
-			login.jsですよ
-			<Paper>
+		<div style={{width:"80%",margin:"0 auto"}}>
+			<Paper style={{margin:"20px",padding:"20px"}}>
 			<h2> ログイン画面 </h2>
 			<h2/>
 			<TextField hintText="ユーザID" onChange={this.handleUserIdChange} value={this.state.userId}/><p/>
