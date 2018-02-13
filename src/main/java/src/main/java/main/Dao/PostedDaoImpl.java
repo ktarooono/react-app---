@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -26,6 +27,8 @@ public class PostedDaoImpl {
 	private static final String INSERT_SQL = "insert into posted values(?,?,?,?,?,?);";
 
 	private static final String GET_MAX_ID = "select max(posted_id) from posted ;";
+
+	private static final String SERECT_BY_USERID = "select * from posted where user = ?;";
 
 
 	/*
@@ -51,6 +54,37 @@ public class PostedDaoImpl {
 
 
 
+	}
+
+	public List<Posted> selectByUserId(String userId, Connection connection) throws SQLException {
+		List<Posted> posted = null;
+
+		try(PreparedStatement pStatement = connection.prepareStatement(SERECT_BY_USERID);) {
+
+			pStatement.setString(1, userId);
+			ResultSet resultSet = pStatement.executeQuery();
+
+			while(resultSet.next()) {
+				//posted.setPostedId(resultSet.getInt("posted_Id"));
+				//statement, user, date, picture
+				//posted.set
+				//sentence? statement?
+
+				posted.add(new Posted(resultSet.getInt("posted_id"),
+						resultSet.getString("user"),
+						resultSet.getString("title"),
+						resultSet.getString("sentence"),
+						resultSet.getTimestamp("date"),
+						resultSet.getString("picture")));
+
+			}
+
+			return posted;
+
+		} catch (SQLException e) {
+			// TODO: handle exception
+			throw e;
+		}
 	}
 
 
@@ -101,6 +135,8 @@ public class PostedDaoImpl {
 		}
 
 	}
+
+
 
 
 
